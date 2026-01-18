@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +37,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -284,6 +286,176 @@
       box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
     }
 
+    /* Portfolio Section Styles */
+    .portfolio-section {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 40px 30px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .portfolio-section h2 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      opacity: 0.8;
+      margin-top: 6px;
+    }
+
+    .featured-projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .project-card {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+      border-color: rgba(102, 126, 234, 0.5);
+    }
+
+    .project-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .project-star {
+      font-size: 20px;
+    }
+
+    .project-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      opacity: 0.8;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tech-tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      opacity: 0.9;
+    }
+
+    .category-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .category-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 25px;
+      font-size: 13px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .category-tag:hover {
+      background: rgba(102, 126, 234, 0.3);
+      border-color: rgba(102, 126, 234, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .portfolio-cta {
+      text-align: center;
+    }
+
+    .portfolio-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .portfolio-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+    }
+
     @media (max-width: 768px) {
       .card-header {
         padding: 30px 20px;
@@ -322,15 +494,53 @@
       .services-grid {
         grid-template-columns: 1fr;
       }
+
+      /* Portfolio responsive */
+      .portfolio-section {
+        padding: 30px 20px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .stat-number {
+        font-size: 28px;
+      }
+
+      .stat-label {
+        font-size: 11px;
+      }
+
+      .featured-projects {
+        grid-template-columns: 1fr;
+      }
+
+      .category-tags {
+        gap: 8px;
+      }
+
+      .category-tag {
+        padding: 8px 14px;
+        font-size: 12px;
+      }
+
+      .portfolio-btn {
+        padding: 14px 30px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="card-container">
     <!-- Header Section -->
     <div class="card-header">
       <div class="profile-section">
-        <img src="https://i.postimg.cc/4djrhjGY/ZN-Studio-bighead-photo.png" alt="張惟荏 ( Nick Chang )" class="profile-image">
+        <img src="https://i.postimg.cc/4djrhjGY/ZN-Studio-bighead-photo.png" alt="張惟荏 ( Nick Chang )"
+          class="profile-image">
         <div class="profile-info">
           <h1>張惟荏 ( Nick Chang )</h1>
           <div class="title">n8n 自動化講師 / AI 顧問</div>
@@ -415,6 +625,96 @@
         </div>
       </div>
 
+      <!-- n8n Portfolio Section -->
+      <div class="portfolio-section">
+        <h2>🤖 n8n 自動化作品集</h2>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">30+</div>
+            <div class="stat-label">工作流程</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">專案分類</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">API 整合</div>
+          </div>
+        </div>
+
+        <!-- Featured Projects -->
+        <div class="featured-projects">
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/%E5%95%86%E6%A5%AD%E6%B5%81%E7%A8%8B%E8%87%AA%E5%8B%95%E5%8C%96"
+            class="project-card" target="_blank">
+            <div class="project-card-header">
+              <span class="project-star">⭐</span>
+              <span class="project-title">自送樣系統範本</span>
+            </div>
+            <div class="project-desc">實驗室樣品管理的完整解決方案，整合 5+ 系統</div>
+            <div class="project-tech">
+              <span class="tech-tag">n8n</span>
+              <span class="tech-tag">Google Sheets</span>
+              <span class="tech-tag">LINE OA</span>
+              <span class="tech-tag">AI Agent</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/%E7%A4%BE%E7%BE%A4%E5%AA%92%E9%AB%94%E8%87%AA%E5%8B%95%E5%8C%96"
+            class="project-card" target="_blank">
+            <div class="project-card-header">
+              <span class="project-star">⭐</span>
+              <span class="project-title">Threads 自動發文系統</span>
+            </div>
+            <div class="project-desc">社群媒體內容自動化發布，節省 80% 發文時間</div>
+            <div class="project-tech">
+              <span class="tech-tag">Threads API</span>
+              <span class="tech-tag">OpenAI</span>
+              <span class="tech-tag">排程發文</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/%E6%95%99%E8%82%B2%E5%AD%B8%E7%BF%92%E7%B3%BB%E7%B5%B1"
+            class="project-card" target="_blank">
+            <div class="project-card-header">
+              <span class="project-star">⭐</span>
+              <span class="project-title">iPAS 學習管理系統</span>
+            </div>
+            <div class="project-desc">智能化考試準備與分析平台，個人化學習建議</div>
+            <div class="project-tech">
+              <span class="tech-tag">LINE Bot</span>
+              <span class="tech-tag">AI Analysis</span>
+              <span class="tech-tag">錯題統計</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Category Tags -->
+        <div class="category-tags">
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/AI-%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA"
+            class="category-tag" target="_blank">🤖 AI 聊天機器人</a>
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/%E7%A4%BE%E7%BE%A4%E5%AA%92%E9%AB%94%E8%87%AA%E5%8B%95%E5%8C%96"
+            class="category-tag" target="_blank">📱 社群媒體自動化</a>
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/%E6%95%99%E8%82%B2%E5%AD%B8%E7%BF%92%E7%B3%BB%E7%B5%B1"
+            class="category-tag" target="_blank">📚 教育學習系統</a>
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/%E5%95%86%E6%A5%AD%E6%B5%81%E7%A8%8B%E8%87%AA%E5%8B%95%E5%8C%96"
+            class="category-tag" target="_blank">💼 商業流程自動化</a>
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/%E5%85%A7%E5%AE%B9%E8%88%87%E7%88%AC%E8%9F%B2"
+            class="category-tag" target="_blank">📰 內容與爬蟲</a>
+          <a href="https://github.com/nickleo051216/nick-n8n/blob/main/workflows/%E5%AF%A6%E7%94%A8%E5%B7%A5%E5%85%B7"
+            class="category-tag" target="_blank">🛠️ 實用工具</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="portfolio-cta">
+          <a href="https://github.com/nickleo051216/nick-n8n" class="portfolio-btn" target="_blank">
+            🔗 查看完整作品集
+          </a>
+        </div>
+      </div>
+
       <!-- Social Links -->
       <div class="social-links">
         <a href="https://lin.ee/Faz0doj" class="social-btn" target="_blank">
@@ -437,7 +737,8 @@
       </div>
 
       <!-- Consultation Link Section -->
-      <div style="text-align: center; margin-top: 30px; padding: 30px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 16px;">
+      <div
+        style="text-align: center; margin-top: 30px; padding: 30px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 16px;">
         <h3 style="font-size: 20px; color: #212529; margin-bottom: 12px; font-weight: 600;">💼 需要專業諮詢？</h3>
         <p style="font-size: 14px; color: #6c757d; margin-bottom: 20px;">填寫表單,讓我了解你的需求</p>
         <a href="https://forms.gle/KJzVJ1bq4TSzwmh87" target="_blank" class="consultation-btn">
@@ -451,4 +752,5 @@
     // 電子名片互動功能（預留）
   </script>
 </body>
+
 </html>
